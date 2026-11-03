@@ -1,7 +1,7 @@
 ﻿/**
  * Clique & Poesia - Galeria Exclusiva de Fotos
  * Evento: Batizado do Enrico
- * Sistema Inteligente com Detecção e Filtro de Fotos Verticais e Horizontais
+ * Sistema Inteligente de Visualização, Seleção, Lightbox e Download
  */
 
 (function () {
@@ -13,8 +13,6 @@
     photographerBrand: "Clique & Poesia",
     photographerWhatsapp: "553897569353",
     totalPhotos: 0,
-    totalVertical: 0,
-    totalHorizontal: 0,
     photos: []
   };
 
@@ -22,7 +20,7 @@
 
   const state = {
     selectedIds: new Set(),
-    activeFilter: 'all', // 'all', 'vertical', 'horizontal', 'selected'
+    activeFilter: 'all', // 'all' ou 'selected'
     searchQuery: '',
     lightboxIndex: -1,
     filteredPhotos: []
@@ -56,18 +54,12 @@
   const elements = {
     photosGrid: document.getElementById('photosGrid'),
     totalPhotosCount: document.getElementById('totalPhotosCount'),
-    heroVertCount: document.getElementById('heroVertCount'),
-    heroHorizCount: document.getElementById('heroHorizCount'),
     allCountTab: document.getElementById('allCountTab'),
-    verticalCountTab: document.getElementById('verticalCountTab'),
-    horizontalCountTab: document.getElementById('horizontalCountTab'),
     selectedCountTab: document.getElementById('selectedCountTab'),
     selectedFloatingCount: document.getElementById('selectedFloatingCount'),
     floatingBar: document.getElementById('floatingBar'),
     searchInput: document.getElementById('searchInput'),
     tabAll: document.getElementById('tabAll'),
-    tabVertical: document.getElementById('tabVertical'),
-    tabHorizontal: document.getElementById('tabHorizontal'),
     tabSelected: document.getElementById('tabSelected'),
     btnSelectAll: document.getElementById('btnSelectAll'),
     btnClearSelection: document.getElementById('btnClearSelection'),
@@ -114,18 +106,9 @@
   // Filtrar fotos com base na aba ativa e busca
   function computeFilteredPhotos() {
     return data.photos.filter(photo => {
-      // Filtro por aba
       if (state.activeFilter === 'selected' && !state.selectedIds.has(photo.id)) {
         return false;
       }
-      if (state.activeFilter === 'vertical' && photo.orientation !== 'portrait') {
-        return false;
-      }
-      if (state.activeFilter === 'horizontal' && photo.orientation !== 'landscape') {
-        return false;
-      }
-
-      // Filtro por texto de pesquisa
       if (state.searchQuery) {
         const query = state.searchQuery.toLowerCase();
         return photo.fileName.toLowerCase().includes(query) || photo.title.toLowerCase().includes(query);
@@ -137,15 +120,8 @@
   // Atualizar contadores na tela
   function updateCounters() {
     const selectedCount = state.selectedIds.size;
-    const totalVert = data.photos.filter(p => p.orientation === 'portrait').length;
-    const totalHoriz = data.photos.filter(p => p.orientation === 'landscape').length;
-
     if (elements.totalPhotosCount) elements.totalPhotosCount.textContent = data.photos.length;
-    if (elements.heroVertCount) elements.heroVertCount.textContent = totalVert;
-    if (elements.heroHorizCount) elements.heroHorizCount.textContent = totalHoriz;
     if (elements.allCountTab) elements.allCountTab.textContent = data.photos.length;
-    if (elements.verticalCountTab) elements.verticalCountTab.textContent = totalVert;
-    if (elements.horizontalCountTab) elements.horizontalCountTab.textContent = totalHoriz;
     if (elements.selectedCountTab) elements.selectedCountTab.textContent = selectedCount;
     if (elements.selectedFloatingCount) elements.selectedFloatingCount.textContent = selectedCount;
 
@@ -207,21 +183,12 @@
     showToast(`Download de ${photo.fileName} iniciado!`);
   }
 
-  // Renderizar a Galeria de Fotos
+  // Renderizar a Galeria de Fotos (Masonry fluida respeitando proporções originais)
   function renderGallery() {
     state.filteredPhotos = computeFilteredPhotos();
     elements.photosGrid.innerHTML = '';
 
     if (state.filteredPhotos.length === 0) {
-      let emptyMsg = 'Nenhuma foto corresponde à sua pesquisa.';
-      if (state.activeFilter === 'selected') {
-        emptyMsg = 'Você ainda não favoritou nenhuma foto. Clique no coração de cada foto para marcá-la!';
-      } else if (state.activeFilter === 'vertical') {
-        emptyMsg = 'Nenhuma foto vertical encontrada com este critério.';
-      } else if (state.activeFilter === 'horizontal') {
-        emptyMsg = 'Nenhuma foto horizontal encontrada com este critério.';
-      }
-
       elements.photosGrid.innerHTML = `
         <div class="empty-gallery">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -230,7 +197,9 @@
             <polyline points="21 15 16 10 5 21"/>
           </svg>
           <h3>Nenhuma memória encontrada</h3>
-          <p>${emptyMsg}</p>
+          <p>${state.activeFilter === 'selected' 
+            ? 'Você ainda não favoritou nenhuma foto. Clique no coração de cada foto para marcá-la!' 
+            : 'Nenhuma foto corresponde à sua pesquisa.'}</p>
         </div>
       `;
       updateCounters();
@@ -241,10 +210,9 @@
 
     state.filteredPhotos.forEach((photo, index) => {
       const isSelected = state.selectedIds.has(photo.id);
-      const isVertical = photo.orientation === 'portrait';
 
       const card = document.createElement('div');
-      card.className = `photo-card ${isSelected ? 'is-selected' : ''} ${isVertical ? 'is-vertical' : 'is-horizontal'}`;
+      card.className = `photo-card ${isSelected ? 'is-selected' : ''}`;
       card.setAttribute('data-id', photo.id);
       card.setAttribute('data-index', index);
 
@@ -252,7 +220,7 @@
         <div class="photo-card-media" role="button" tabindex="0" title="Clique para ver em tela cheia">
           <img 
             src="${encodeURI(photo.url)}" 
-            alt="Foto ${photo.title} do Batizado do Enrico (${isVertical ? 'Vertical' : 'Horizontal'})" 
+            alt="Foto ${photo.title} do Batizado do Enrico" 
             class="photo-img" 
             loading="lazy"
           />
@@ -274,10 +242,7 @@
         </div>
 
         <div class="photo-card-footer">
-          <div class="photo-meta-left">
-            <span class="photo-name" title="${photo.fileName}">${photo.fileName}</span>
-            <span class="orientation-tag">${isVertical ? 'Vertical' : 'Horizontal'}</span>
-          </div>
+          <span class="photo-name" title="${photo.fileName}">${photo.fileName}</span>
           <span class="photo-size-badge">${photo.sizeMb || 'HD'}</span>
         </div>
       `;
@@ -329,10 +294,9 @@
     if (index < 0 || index >= state.filteredPhotos.length) return;
     state.lightboxIndex = index;
     const photo = state.filteredPhotos[index];
-    const isVertical = photo.orientation === 'portrait';
 
     elements.lightboxTitle.textContent = photo.fileName;
-    elements.lightboxOrientationTag.textContent = `Batizado do Enrico • Foto ${isVertical ? 'Vertical' : 'Horizontal'} (${photo.width} × ${photo.height})`;
+    elements.lightboxOrientationTag.textContent = 'Batizado do Enrico • Clique & Poesia';
     elements.lightboxImg.src = encodeURI(photo.url);
     elements.lightboxImg.alt = photo.fileName;
     elements.lightboxDownload.href = encodeURI(photo.url);
@@ -498,7 +462,7 @@
       return;
     }
 
-    const fileNames = selectedPhotos.map(p => `• ${p.fileName} (${p.orientation === 'portrait' ? 'Vertical' : 'Horizontal'})`).join('\n');
+    const fileNames = selectedPhotos.map(p => `• ${p.fileName}`).join('\n');
     const message = `🕊️ *Seleção de Fotos - Batizado do Enrico*\n` +
       `_Clique & Poesia - Galeria Exclusiva_\n\n` +
       `Olá! Aqui estão as *${selectedPhotos.length} fotos* que selecionamos com carinho do *Batizado do Enrico*:\n\n` +
@@ -549,27 +513,23 @@
   // =========================================================================
   // Configuração dos Eventos e Abas
   // =========================================================================
-  function setActiveTab(filterName, activeBtn) {
-    [elements.tabAll, elements.tabVertical, elements.tabHorizontal, elements.tabSelected].forEach(btn => {
-      if (btn) btn.classList.remove('active');
-    });
-    if (activeBtn) activeBtn.classList.add('active');
-    state.activeFilter = filterName;
-    renderGallery();
-  }
-
   function setupEventListeners() {
     if (elements.tabAll) {
-      elements.tabAll.addEventListener('click', () => setActiveTab('all', elements.tabAll));
+      elements.tabAll.addEventListener('click', () => {
+        elements.tabAll.classList.add('active');
+        if (elements.tabSelected) elements.tabSelected.classList.remove('active');
+        state.activeFilter = 'all';
+        renderGallery();
+      });
     }
-    if (elements.tabVertical) {
-      elements.tabVertical.addEventListener('click', () => setActiveTab('vertical', elements.tabVertical));
-    }
-    if (elements.tabHorizontal) {
-      elements.tabHorizontal.addEventListener('click', () => setActiveTab('horizontal', elements.tabHorizontal));
-    }
+
     if (elements.tabSelected) {
-      elements.tabSelected.addEventListener('click', () => setActiveTab('selected', elements.tabSelected));
+      elements.tabSelected.addEventListener('click', () => {
+        elements.tabSelected.classList.add('active');
+        if (elements.tabAll) elements.tabAll.classList.remove('active');
+        state.activeFilter = 'selected';
+        renderGallery();
+      });
     }
 
     if (elements.searchInput) {

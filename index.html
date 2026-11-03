@@ -61,8 +61,8 @@
       </h1>
       <p class="hero-message">
         Um dia sagrado de bênçãos, luz divina e muito amor eternizados em cada detalhe.
-        Preparamos esta galeria para que você e sua família revivam cada instante com a máxima fidelidade.
-        Todas as fotos foram ajustadas em sua proporção original (verticais e horizontais), prontas para apreciação e download.
+        Preparamos esta galeria exclusiva para que você e sua família revivam cada instante com máxima emoção e fidelidade.
+        Aprecie as fotos em alta qualidade, selecione suas favoritas no coração e faça o download quando quiser.
       </p>
 
       <div class="hero-stats-row">
@@ -76,56 +76,31 @@
         </div>
 
         <div class="stat-pill">
-          <!-- Ícone Proporção / Enquadramento -->
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="5" width="8" height="14" rx="1.5"/>
-            <rect x="13" y="8" width="8" height="8" rx="1.5"/>
-          </svg>
-          <span><strong id="heroVertCount">62</strong> Verticais &bull; <strong id="heroHorizCount">28</strong> Horizontais</span>
-        </div>
-
-        <div class="stat-pill">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
-          <span>Enquadramento Original <strong>Sem Cortes</strong></span>
+          <span>Fotos originais em <strong>Alta Resolução</strong></span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       Barra de Ferramentas / Filtros por Orientação e Seleção
+       Barra de Ferramentas / Filtros e Ações
        ========================================================================= -->
   <section class="toolbar-section">
     <div class="toolbar-inner">
       <div class="filter-tabs">
-        <button type="button" class="tab-btn active" id="tabAll" title="Ver todas as 90 fotos">
-          <span>Todas</span>
+        <button type="button" class="tab-btn active" id="tabAll" title="Ver todas as fotos">
+          <span>Todas as Fotos</span>
           <span class="tab-count" id="allCountTab">90</span>
         </button>
 
-        <button type="button" class="tab-btn" id="tabVertical" title="Filtrar fotos verticais (retratos)">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <rect x="5" y="2" width="14" height="20" rx="2"/>
-          </svg>
-          <span>Verticais</span>
-          <span class="tab-count" id="verticalCountTab">62</span>
-        </button>
-
-        <button type="button" class="tab-btn" id="tabHorizontal" title="Filtrar fotos horizontais (paisagens / altares)">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <rect x="2" y="5" width="20" height="14" rx="2"/>
-          </svg>
-          <span>Horizontais</span>
-          <span class="tab-count" id="horizontalCountTab">28</span>
-        </button>
-
         <button type="button" class="tab-btn" id="tabSelected" title="Ver apenas suas fotos favoritas">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
-          <span>Favoritas</span>
+          <span>Selecionadas</span>
           <span class="tab-count badge-accent" id="selectedCountTab">0</span>
         </button>
       </div>
@@ -166,7 +141,7 @@
   </section>
 
   <!-- =========================================================================
-       Grade Masonry Editorial de Fotos (Respeita proporções verticais e horizontais)
+       Grade Masonry Editorial de Fotos (Apresentação fluida vertical e horizontal)
        ========================================================================= -->
   <main class="gallery-main">
     <div class="gallery-container">
@@ -222,7 +197,7 @@
   <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Visualizador de Fotos em Alta Resolução">
     <div class="lightbox-header">
       <div class="lightbox-title-area">
-        <span class="lightbox-eyebrow" id="lightboxOrientationTag">Batizado do Enrico &bull; Foto Vertical</span>
+        <span class="lightbox-eyebrow" id="lightboxOrientationTag">Batizado do Enrico &bull; Clique & Poesia</span>
         <h2 class="lightbox-current-title" id="lightboxTitle">DSC03637.jpg</h2>
       </div>
 
