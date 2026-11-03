@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Clique & Poesia - Galeria Exclusiva de Fotos
  * Evento: Batizado do Enrico
  * Sistema Inteligente de Visualização, Seleção, Lightbox e Download
@@ -68,7 +68,9 @@
     btnCopyCodes: document.getElementById('btnCopyCodes'),
     lightboxModal: document.getElementById('lightboxModal'),
     lightboxStage: document.getElementById('lightboxStage'),
+    lightboxImgWrap: document.getElementById('lightboxImgWrap'),
     lightboxImg: document.getElementById('lightboxImg'),
+    lightboxZoomToggle: document.getElementById('lightboxZoomToggle'),
     lightboxTitle: document.getElementById('lightboxTitle'),
     lightboxOrientationTag: document.getElementById('lightboxOrientationTag'),
     lightboxCounter: document.getElementById('lightboxCounter'),
@@ -290,10 +292,81 @@
     }
   }
 
+  // =========================================================================
+  // Sistema de Zoom & Pan no Lightbox (Desktop & Mobile)
+  // =========================================================================
+  const zoomState = {
+    scale: 1,
+    minScale: 1,
+    maxScale: 3.5,
+    posX: 0,
+    posY: 0,
+    isDragging: false,
+    dragStartX: 0,
+    dragStartY: 0,
+    initialDistance: 0,
+    initialScale: 1
+  };
+
+  function applyZoomTransform(animate = true) {
+    if (!elements.lightboxImg) return;
+    elements.lightboxImg.style.transition = animate ? 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
+    elements.lightboxImg.style.transform = `translate3d(${zoomState.posX}px, ${zoomState.posY}px, 0) scale(${zoomState.scale})`;
+
+    if (elements.lightboxImgWrap) {
+      elements.lightboxImgWrap.classList.toggle('is-zoomed', zoomState.scale > 1.05);
+    }
+
+    if (elements.lightboxZoomToggle) {
+      elements.lightboxZoomToggle.classList.toggle('is-active', zoomState.scale > 1.05);
+      elements.lightboxZoomToggle.title = zoomState.scale > 1.05 ? 'Reduzir Zoom (100%)' : 'Aproximar foto (Zoom)';
+    }
+  }
+
+  function resetZoom() {
+    zoomState.scale = 1;
+    zoomState.posX = 0;
+    zoomState.posY = 0;
+    zoomState.isDragging = false;
+    if (elements.lightboxImgWrap) {
+      elements.lightboxImgWrap.classList.remove('is-dragging');
+      elements.lightboxImgWrap.classList.remove('is-zoomed');
+    }
+    applyZoomTransform(false);
+  }
+
+  function toggleZoom(originX = null, originY = null) {
+    if (zoomState.scale > 1.05) {
+      resetZoom();
+    } else {
+      zoomTo(2.3, originX, originY);
+    }
+  }
+
+  function zoomTo(targetScale, clientX = null, clientY = null) {
+    const newScale = Math.max(zoomState.minScale, Math.min(zoomState.maxScale, targetScale));
+    if (newScale <= 1.02) {
+      resetZoom();
+      return;
+    }
+
+    if (clientX !== null && clientY !== null && elements.lightboxImg) {
+      const rect = elements.lightboxImg.getBoundingClientRect();
+      const clickX = clientX - (rect.left + rect.width / 2);
+      const clickY = clientY - (rect.top + rect.height / 2);
+      zoomState.posX = -clickX * (newScale - 1);
+      zoomState.posY = -clickY * (newScale - 1);
+    }
+    zoomState.scale = newScale;
+    applyZoomTransform(true);
+  }
+
   function openLightbox(index) {
     if (index < 0 || index >= state.filteredPhotos.length) return;
     state.lightboxIndex = index;
     const photo = state.filteredPhotos[index];
+
+    resetZoom();
 
     elements.lightboxTitle.textContent = photo.fileName;
     elements.lightboxOrientationTag.textContent = 'Batizado do Enrico • Clique & Poesia';
@@ -310,6 +383,7 @@
   }
 
   function closeLightbox() {
+    resetZoom();
     elements.lightboxModal.classList.remove('is-open');
     document.body.style.overflow = '';
     state.lightboxIndex = -1;
@@ -330,31 +404,129 @@
     openLightbox(prevIndex);
   }
 
-  // Suporte a gestos Swipe no Lightbox para Celulares
-  let touchStartX = 0;
-  let touchEndX = 0;
+  // Interações de Mouse e Touch para Zoom, Pan e Navegação
+  function setupLightboxInteractions() {
+    if (!elements.lightboxStage || !elements.lightboxImgWrap) return;
 
-  if (elements.lightboxStage) {
+    // Duplo clique na imagem (Desktop)
+    elements.lightboxImgWrap.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      toggleZoom(e.clientX, e.clientY);
+    });
+
+    // Roda do mouse para Zoom contínuo (Desktop)
+    elements.lightboxStage.addEventListener('wheel', (e) => {
+      if (elements.lightboxModal.classList.contains('is-open')) {
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 0.35 : -0.35;
+        const nextScale = Math.max(1, Math.min(zoomState.maxScale, zoomState.scale + delta));
+        if (nextScale <= 1.02) {
+          resetZoom();
+        } else {
+          zoomTo(nextScale, e.clientX, e.clientY);
+        }
+      }
+    }, { passive: false });
+
+    // Arrastar com mouse (Pan quando com zoom)
+    elements.lightboxImgWrap.addEventListener('mousedown', (e) => {
+      if (zoomState.scale > 1.05) {
+        e.preventDefault();
+        zoomState.isDragging = true;
+        zoomState.dragStartX = e.clientX - zoomState.posX;
+        zoomState.dragStartY = e.clientY - zoomState.posY;
+        elements.lightboxImgWrap.classList.add('is-dragging');
+      }
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (zoomState.isDragging && zoomState.scale > 1.05) {
+        zoomState.posX = e.clientX - zoomState.dragStartX;
+        zoomState.posY = e.clientY - zoomState.dragStartY;
+        applyZoomTransform(false);
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (zoomState.isDragging) {
+        zoomState.isDragging = false;
+        elements.lightboxImgWrap.classList.remove('is-dragging');
+      }
+    });
+
+    // Touch: Duplo Toque, Pinch-to-zoom, Pan e Swipe para trocar de foto
+    let lastTouchTime = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartZoomX = 0;
+    let touchStartZoomY = 0;
+
     elements.lightboxStage.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
+      if (e.touches.length === 1) {
+        const now = Date.now();
+        if (now - lastTouchTime < 320) {
+          e.preventDefault();
+          toggleZoom(e.touches[0].clientX, e.touches[0].clientY);
+          lastTouchTime = 0;
+          return;
+        }
+        lastTouchTime = now;
+
+        if (zoomState.scale > 1.05) {
+          zoomState.isDragging = true;
+          touchStartZoomX = e.touches[0].clientX - zoomState.posX;
+          touchStartZoomY = e.touches[0].clientY - zoomState.posY;
+        } else {
+          touchStartX = e.touches[0].screenX;
+          touchStartY = e.touches[0].screenY;
+        }
+      } else if (e.touches.length === 2) {
+        zoomState.initialDistance = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        zoomState.initialScale = zoomState.scale;
+      }
+    }, { passive: false });
+
+    elements.lightboxStage.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1 && zoomState.scale > 1.05 && zoomState.isDragging) {
+        e.preventDefault();
+        zoomState.posX = e.touches[0].clientX - touchStartZoomX;
+        zoomState.posY = e.touches[0].clientY - touchStartZoomY;
+        applyZoomTransform(false);
+      } else if (e.touches.length === 2 && zoomState.initialDistance > 0) {
+        e.preventDefault();
+        const currentDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        const factor = currentDist / zoomState.initialDistance;
+        const nextScale = Math.max(1, Math.min(zoomState.maxScale, zoomState.initialScale * factor));
+        zoomState.scale = nextScale;
+        applyZoomTransform(false);
+      }
+    }, { passive: false });
 
     elements.lightboxStage.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-  }
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchEndX - touchStartX;
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff < 0) {
-        nextLightbox(); // swipe para a esquerda -> próxima
-      } else {
-        prevLightbox(); // swipe para a direita -> anterior
+      if (zoomState.scale <= 1.05 && zoomState.scale !== 1) {
+        resetZoom();
       }
-    }
+
+      if (zoomState.scale <= 1.05 && e.changedTouches.length === 1) {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 50) {
+          if (diff < 0) nextLightbox();
+          else prevLightbox();
+        }
+      }
+
+      if (e.touches.length === 0) {
+        zoomState.isDragging = false;
+        zoomState.initialDistance = 0;
+      }
+    });
   }
 
   // =========================================================================
@@ -592,20 +764,39 @@
       });
     }
 
+    if (elements.lightboxZoomToggle) {
+      elements.lightboxZoomToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleZoom();
+      });
+    }
+
     if (elements.lightboxModal) {
       elements.lightboxModal.addEventListener('click', (e) => {
         if (e.target === elements.lightboxModal || e.target === elements.lightboxStage) {
-          closeLightbox();
+          if (zoomState.scale > 1.05) {
+            resetZoom();
+          } else {
+            closeLightbox();
+          }
         }
       });
     }
+
+    // Inicializar interações avançadas de toque, roda do mouse e pan
+    setupLightboxInteractions();
 
     // Teclas de atalho no teclado
     document.addEventListener('keydown', (e) => {
       if (!elements.lightboxModal.classList.contains('is-open')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') nextLightbox();
-      if (e.key === 'ArrowLeft') prevLightbox();
+      if (e.key === '+' || e.key === '=') zoomTo(zoomState.scale + 0.4);
+      if (e.key === '-' || e.key === '_') zoomTo(zoomState.scale - 0.4);
+      if (e.key === '0') resetZoom();
+      if (zoomState.scale <= 1.05) {
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+      }
     });
   }
 

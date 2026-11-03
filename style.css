@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Clique & Poesia - Galeria Exclusiva de Entrega
    Batizado do Enrico
    Identidade Visual Oficial: cliqueepoesia.vercel.app
@@ -889,27 +889,40 @@ body {
   justify-content: center;
   padding: 16px 80px;
   overflow: hidden;
-  touch-action: pan-y;
+  touch-action: none;
+  user-select: none;
 }
 
 .lightbox-image-wrap {
-  max-width: 100%;
-  max-height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: zoom-in;
 }
 
-/* Imagem no Lightbox ajustada para nunca estourar a tela */
+.lightbox-image-wrap.is-zoomed {
+  cursor: grab;
+}
+
+.lightbox-image-wrap.is-dragging {
+  cursor: grabbing;
+}
+
+/* Imagem no Lightbox com suporte a Zoom e Alta Definição */
 .lightbox-image {
-  max-width: min(92vw, 1200px);
+  max-width: min(92vw, 1400px);
   max-height: calc(100vh - 160px);
   width: auto;
   height: auto;
   object-fit: contain;
   border-radius: var(--radius-sm);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform-origin: center center;
+  will-change: transform;
+  pointer-events: auto;
 }
 
 .lightbox-nav-btn {

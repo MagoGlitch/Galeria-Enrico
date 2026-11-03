@@ -1,7 +1,7 @@
 ﻿/**
- * Configuração e Lista de Fotos da Galeria - Clique & Poesia
+ * ConfiguraÃ§Ã£o e Lista de Fotos da Galeria - Clique & Poesia
  * Batizado do Enrico
- * Atualizado em 03/11/2026 00:31:57
+ * Atualizado em 03/11/2026 12:30:06
  */
 window.GALLERY_DATA = {
     "clientName":  "Enrico",
@@ -11,7 +11,7 @@ window.GALLERY_DATA = {
     "brandSubtitle":  "Um clique, uma poesia!",
     "photographerWhatsapp":  "553897569353",
     "photographerInstagram":  "https://instagram.com/cliqueepoesia",
-    "welcomeMessage":  "Um dia sagrado de bênçãos e muito amor eternizado em cada detalhe. Preparamos esta galeria para que você e sua família revivam cada instante desse momento especial.",
+    "welcomeMessage":  "Um dia sagrado de bÃªnÃ§Ã£os e muito amor eternizado em cada detalhe. Preparamos esta galeria para que vocÃª e sua famÃ­lia revivam cada instante desse momento especial.",
     "totalPhotos":  88,
     "totalVertical":  60,
     "totalHorizontal":  28,
@@ -21,781 +21,781 @@ window.GALLERY_DATA = {
                        "fileName":  "DSC03640.jpg",
                        "url":  "photos/DSC03640.jpg",
                        "title":  "DSC03640",
-                       "sizeMb":  "369 KB",
+                       "sizeMb":  "1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  2,
                        "fileName":  "DSC03641.jpg",
                        "url":  "photos/DSC03641.jpg",
                        "title":  "DSC03641",
-                       "sizeMb":  "424 KB",
+                       "sizeMb":  "1.6 MB",
                        "orientation":  "portrait",
-                       "width":  819,
-                       "height":  1024,
-                       "aspectRatio":  "819:1024"
+                       "width":  2029,
+                       "height":  2536,
+                       "aspectRatio":  "2029:2536"
                    },
                    {
                        "id":  3,
                        "fileName":  "DSC03643.jpg",
                        "url":  "photos/DSC03643.jpg",
                        "title":  "DSC03643",
-                       "sizeMb":  "360 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  4,
                        "fileName":  "DSC03646.jpg",
                        "url":  "photos/DSC03646.jpg",
                        "title":  "DSC03646",
-                       "sizeMb":  "299 KB",
+                       "sizeMb":  "671 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  5,
                        "fileName":  "DSC03649.jpg",
                        "url":  "photos/DSC03649.jpg",
                        "title":  "DSC03649",
-                       "sizeMb":  "245 KB",
+                       "sizeMb":  "864 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  6,
                        "fileName":  "DSC03651.jpg",
                        "url":  "photos/DSC03651.jpg",
                        "title":  "DSC03651",
-                       "sizeMb":  "245 KB",
+                       "sizeMb":  "837 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  7,
                        "fileName":  "DSC03654.jpg",
                        "url":  "photos/DSC03654.jpg",
                        "title":  "DSC03654",
-                       "sizeMb":  "285 KB",
+                       "sizeMb":  "856 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  8,
                        "fileName":  "DSC03662.jpg",
                        "url":  "photos/DSC03662.jpg",
                        "title":  "DSC03662",
-                       "sizeMb":  "204 KB",
+                       "sizeMb":  "756 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  576,
-                       "aspectRatio":  "1024:576"
+                       "width":  2560,
+                       "height":  1440,
+                       "aspectRatio":  "2560:1440"
                    },
                    {
                        "id":  9,
                        "fileName":  "DSC03664.jpg",
                        "url":  "photos/DSC03664.jpg",
                        "title":  "DSC03664",
-                       "sizeMb":  "243 KB",
+                       "sizeMb":  "914 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  576,
-                       "aspectRatio":  "1024:576"
+                       "width":  2560,
+                       "height":  1440,
+                       "aspectRatio":  "2560:1440"
                    },
                    {
                        "id":  10,
                        "fileName":  "DSC03666.jpg",
                        "url":  "photos/DSC03666.jpg",
                        "title":  "DSC03666",
-                       "sizeMb":  "289 KB",
+                       "sizeMb":  "977 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  11,
                        "fileName":  "DSC03669.jpg",
                        "url":  "photos/DSC03669.jpg",
                        "title":  "DSC03669",
-                       "sizeMb":  "340 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  12,
                        "fileName":  "DSC03673.jpg",
                        "url":  "photos/DSC03673.jpg",
                        "title":  "DSC03673",
-                       "sizeMb":  "376 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  13,
                        "fileName":  "DSC03674.jpg",
                        "url":  "photos/DSC03674.jpg",
                        "title":  "DSC03674",
-                       "sizeMb":  "368 KB",
+                       "sizeMb":  "1.2 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  14,
                        "fileName":  "DSC03676.jpg",
                        "url":  "photos/DSC03676.jpg",
                        "title":  "DSC03676",
-                       "sizeMb":  "349 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  15,
                        "fileName":  "DSC03679.jpg",
                        "url":  "photos/DSC03679.jpg",
                        "title":  "DSC03679",
-                       "sizeMb":  "407 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  731,
-                       "height":  1024,
-                       "aspectRatio":  "731:1024"
+                       "width":  1828,
+                       "height":  2560,
+                       "aspectRatio":  "1828:2560"
                    },
                    {
                        "id":  16,
                        "fileName":  "DSC03683-Editar.jpg",
                        "url":  "photos/DSC03683-Editar.jpg",
                        "title":  "DSC03683-Editar",
-                       "sizeMb":  "9.4 MB",
+                       "sizeMb":  "1016 KB",
                        "orientation":  "landscape",
-                       "width":  4712,
-                       "height":  2651,
-                       "aspectRatio":  "4712:2651"
+                       "width":  2560,
+                       "height":  1440,
+                       "aspectRatio":  "2560:1440"
                    },
                    {
                        "id":  17,
                        "fileName":  "DSC03686.jpg",
                        "url":  "photos/DSC03686.jpg",
                        "title":  "DSC03686",
-                       "sizeMb":  "374 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  731,
-                       "height":  1024,
-                       "aspectRatio":  "731:1024"
+                       "width":  1828,
+                       "height":  2560,
+                       "aspectRatio":  "1828:2560"
                    },
                    {
                        "id":  18,
                        "fileName":  "DSC03691.jpg",
                        "url":  "photos/DSC03691.jpg",
                        "title":  "DSC03691",
-                       "sizeMb":  "288 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  19,
                        "fileName":  "DSC03692.jpg",
                        "url":  "photos/DSC03692.jpg",
                        "title":  "DSC03692",
-                       "sizeMb":  "3 KB",
+                       "sizeMb":  "967 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  20,
                        "fileName":  "DSC03693.jpg",
                        "url":  "photos/DSC03693.jpg",
                        "title":  "DSC03693",
-                       "sizeMb":  "370 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  21,
                        "fileName":  "DSC03696.jpg",
                        "url":  "photos/DSC03696.jpg",
                        "title":  "DSC03696",
-                       "sizeMb":  "284 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  791,
-                       "aspectRatio":  "1024:791"
+                       "width":  2560,
+                       "height":  1978,
+                       "aspectRatio":  "2560:1978"
                    },
                    {
                        "id":  22,
                        "fileName":  "DSC03703.jpg",
                        "url":  "photos/DSC03703.jpg",
                        "title":  "DSC03703",
-                       "sizeMb":  "327 KB",
+                       "sizeMb":  "1 MB",
                        "orientation":  "portrait",
-                       "width":  791,
-                       "height":  1024,
-                       "aspectRatio":  "791:1024"
+                       "width":  1978,
+                       "height":  2560,
+                       "aspectRatio":  "1978:2560"
                    },
                    {
                        "id":  23,
                        "fileName":  "DSC03704.jpg",
                        "url":  "photos/DSC03704.jpg",
                        "title":  "DSC03704",
-                       "sizeMb":  "356 KB",
+                       "sizeMb":  "1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  24,
                        "fileName":  "DSC03706.jpg",
                        "url":  "photos/DSC03706.jpg",
                        "title":  "DSC03706",
-                       "sizeMb":  "64 KB",
+                       "sizeMb":  "1.2 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  25,
                        "fileName":  "DSC03707.jpg",
                        "url":  "photos/DSC03707.jpg",
                        "title":  "DSC03707",
-                       "sizeMb":  "373 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  26,
                        "fileName":  "DSC03714.jpg",
                        "url":  "photos/DSC03714.jpg",
                        "title":  "DSC03714",
-                       "sizeMb":  "410 KB",
+                       "sizeMb":  "1.4 MB",
                        "orientation":  "portrait",
-                       "width":  819,
-                       "height":  1024,
-                       "aspectRatio":  "819:1024"
+                       "width":  2048,
+                       "height":  2560,
+                       "aspectRatio":  "2048:2560"
                    },
                    {
                        "id":  27,
                        "fileName":  "DSC03717-Editar.jpg",
                        "url":  "photos/DSC03717-Editar.jpg",
                        "title":  "DSC03717-Editar",
-                       "sizeMb":  "12.7 MB",
+                       "sizeMb":  "1007 KB",
                        "orientation":  "landscape",
-                       "width":  5162,
-                       "height":  3441,
-                       "aspectRatio":  "5162:3441"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  28,
                        "fileName":  "DSC03722.jpg",
                        "url":  "photos/DSC03722.jpg",
                        "title":  "DSC03722",
-                       "sizeMb":  "3 KB",
+                       "sizeMb":  "982 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  29,
                        "fileName":  "DSC03724.jpg",
                        "url":  "photos/DSC03724.jpg",
                        "title":  "DSC03724",
-                       "sizeMb":  "375 KB",
+                       "sizeMb":  "1.1 MB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  30,
                        "fileName":  "DSC03727-Editar-Editar.jpg",
                        "url":  "photos/DSC03727-Editar-Editar.jpg",
                        "title":  "DSC03727-Editar-Editar",
-                       "sizeMb":  "12.9 MB",
+                       "sizeMb":  "673 KB",
                        "orientation":  "landscape",
-                       "width":  5946,
-                       "height":  3964,
-                       "aspectRatio":  "5946:3964"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  31,
                        "fileName":  "DSC03731.jpg",
                        "url":  "photos/DSC03731.jpg",
                        "title":  "DSC03731",
-                       "sizeMb":  "3 KB",
+                       "sizeMb":  "621 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  32,
                        "fileName":  "DSC03736.jpg",
                        "url":  "photos/DSC03736.jpg",
                        "title":  "DSC03736",
-                       "sizeMb":  "217 KB",
+                       "sizeMb":  "635 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  33,
                        "fileName":  "DSC03737.jpg",
                        "url":  "photos/DSC03737.jpg",
                        "title":  "DSC03737",
-                       "sizeMb":  "309 KB",
+                       "sizeMb":  "666 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  34,
                        "fileName":  "DSC03750.jpg",
                        "url":  "photos/DSC03750.jpg",
                        "title":  "DSC03750",
-                       "sizeMb":  "325 KB",
+                       "sizeMb":  "727 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  35,
                        "fileName":  "DSC03752-Editar.jpg",
                        "url":  "photos/DSC03752-Editar.jpg",
                        "title":  "DSC03752-Editar",
-                       "sizeMb":  "11.7 MB",
+                       "sizeMb":  "823 KB",
                        "orientation":  "landscape",
-                       "width":  5327,
-                       "height":  3551,
-                       "aspectRatio":  "5327:3551"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  36,
                        "fileName":  "DSC03755.jpg",
                        "url":  "photos/DSC03755.jpg",
                        "title":  "DSC03755",
-                       "sizeMb":  "328 KB",
+                       "sizeMb":  "770 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  37,
                        "fileName":  "DSC03756.jpg",
                        "url":  "photos/DSC03756.jpg",
                        "title":  "DSC03756",
-                       "sizeMb":  "342 KB",
+                       "sizeMb":  "807 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  38,
                        "fileName":  "DSC03773.jpg",
                        "url":  "photos/DSC03773.jpg",
                        "title":  "DSC03773",
-                       "sizeMb":  "255 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  39,
                        "fileName":  "DSC03783.jpg",
                        "url":  "photos/DSC03783.jpg",
                        "title":  "DSC03783",
-                       "sizeMb":  "264 KB",
+                       "sizeMb":  "398 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  40,
                        "fileName":  "DSC03786.jpg",
                        "url":  "photos/DSC03786.jpg",
                        "title":  "DSC03786",
-                       "sizeMb":  "304 KB",
+                       "sizeMb":  "715 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  41,
                        "fileName":  "DSC03818.jpg",
                        "url":  "photos/DSC03818.jpg",
                        "title":  "DSC03818",
-                       "sizeMb":  "392 KB",
+                       "sizeMb":  "752 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  42,
                        "fileName":  "DSC03821.jpg",
                        "url":  "photos/DSC03821.jpg",
                        "title":  "DSC03821",
-                       "sizeMb":  "280 KB",
+                       "sizeMb":  "669 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  43,
                        "fileName":  "DSC03822.jpg",
                        "url":  "photos/DSC03822.jpg",
                        "title":  "DSC03822",
-                       "sizeMb":  "251 KB",
+                       "sizeMb":  "607 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  44,
                        "fileName":  "DSC03827.jpg",
                        "url":  "photos/DSC03827.jpg",
                        "title":  "DSC03827",
-                       "sizeMb":  "289 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  45,
                        "fileName":  "DSC03829.jpg",
                        "url":  "photos/DSC03829.jpg",
                        "title":  "DSC03829",
-                       "sizeMb":  "297 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  46,
                        "fileName":  "DSC03833.jpg",
                        "url":  "photos/DSC03833.jpg",
                        "title":  "DSC03833",
-                       "sizeMb":  "186 KB",
+                       "sizeMb":  "424 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  47,
                        "fileName":  "DSC03837.jpg",
                        "url":  "photos/DSC03837.jpg",
                        "title":  "DSC03837",
-                       "sizeMb":  "337 KB",
+                       "sizeMb":  "602 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  48,
                        "fileName":  "DSC03838.jpg",
                        "url":  "photos/DSC03838.jpg",
                        "title":  "DSC03838",
-                       "sizeMb":  "357 KB",
+                       "sizeMb":  "652 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  49,
                        "fileName":  "DSC03842.jpg",
                        "url":  "photos/DSC03842.jpg",
                        "title":  "DSC03842",
-                       "sizeMb":  "261 KB",
+                       "sizeMb":  "607 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  50,
                        "fileName":  "DSC03846.jpg",
                        "url":  "photos/DSC03846.jpg",
                        "title":  "DSC03846",
-                       "sizeMb":  "64 KB",
+                       "sizeMb":  "740 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  51,
                        "fileName":  "DSC03850.jpg",
                        "url":  "photos/DSC03850.jpg",
                        "title":  "DSC03850",
-                       "sizeMb":  "319 KB",
+                       "sizeMb":  "580 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  52,
                        "fileName":  "DSC03852.jpg",
                        "url":  "photos/DSC03852.jpg",
                        "title":  "DSC03852",
-                       "sizeMb":  "189 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  53,
                        "fileName":  "DSC03854.jpg",
                        "url":  "photos/DSC03854.jpg",
                        "title":  "DSC03854",
-                       "sizeMb":  "246 KB",
+                       "sizeMb":  "597 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1706,
+                       "aspectRatio":  "2560:1706"
                    },
                    {
                        "id":  54,
                        "fileName":  "DSC03855.jpg",
                        "url":  "photos/DSC03855.jpg",
                        "title":  "DSC03855",
-                       "sizeMb":  "213 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  576,
-                       "aspectRatio":  "1024:576"
+                       "width":  2560,
+                       "height":  1440,
+                       "aspectRatio":  "2560:1440"
                    },
                    {
                        "id":  55,
                        "fileName":  "DSC03858.jpg",
                        "url":  "photos/DSC03858.jpg",
                        "title":  "DSC03858",
-                       "sizeMb":  "411 KB",
+                       "sizeMb":  "771 KB",
                        "orientation":  "portrait",
-                       "width":  819,
-                       "height":  1024,
-                       "aspectRatio":  "819:1024"
+                       "width":  2048,
+                       "height":  2560,
+                       "aspectRatio":  "2048:2560"
                    },
                    {
                        "id":  56,
                        "fileName":  "DSC03862.jpg",
                        "url":  "photos/DSC03862.jpg",
                        "title":  "DSC03862",
-                       "sizeMb":  "309 KB",
+                       "sizeMb":  "592 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  57,
                        "fileName":  "DSC03864.jpg",
                        "url":  "photos/DSC03864.jpg",
                        "title":  "DSC03864",
-                       "sizeMb":  "334 KB",
+                       "sizeMb":  "633 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  58,
                        "fileName":  "DSC03866.jpg",
                        "url":  "photos/DSC03866.jpg",
                        "title":  "DSC03866",
-                       "sizeMb":  "64 KB",
+                       "sizeMb":  "709 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  59,
                        "fileName":  "DSC03868.jpg",
                        "url":  "photos/DSC03868.jpg",
                        "title":  "DSC03868",
-                       "sizeMb":  "325 KB",
+                       "sizeMb":  "563 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  60,
                        "fileName":  "DSC03870.jpg",
                        "url":  "photos/DSC03870.jpg",
                        "title":  "DSC03870",
-                       "sizeMb":  "322 KB",
+                       "sizeMb":  "588 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  61,
                        "fileName":  "DSC03877.jpg",
                        "url":  "photos/DSC03877.jpg",
                        "title":  "DSC03877",
-                       "sizeMb":  "219 KB",
+                       "sizeMb":  "467 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  62,
                        "fileName":  "DSC03886.jpg",
                        "url":  "photos/DSC03886.jpg",
                        "title":  "DSC03886",
-                       "sizeMb":  "201 KB",
+                       "sizeMb":  "435 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  63,
                        "fileName":  "DSC03889.jpg",
                        "url":  "photos/DSC03889.jpg",
                        "title":  "DSC03889",
-                       "sizeMb":  "230 KB",
+                       "sizeMb":  "466 KB",
                        "orientation":  "portrait",
-                       "width":  687,
-                       "height":  1024,
-                       "aspectRatio":  "687:1024"
+                       "width":  1718,
+                       "height":  2560,
+                       "aspectRatio":  "1718:2560"
                    },
                    {
                        "id":  64,
                        "fileName":  "DSC03894.jpg",
                        "url":  "photos/DSC03894.jpg",
                        "title":  "DSC03894",
-                       "sizeMb":  "209 KB",
+                       "sizeMb":  "421 KB",
                        "orientation":  "portrait",
-                       "width":  677,
-                       "height":  1024,
-                       "aspectRatio":  "677:1024"
+                       "width":  1692,
+                       "height":  2560,
+                       "aspectRatio":  "1692:2560"
                    },
                    {
                        "id":  65,
                        "fileName":  "DSC03899.jpg",
                        "url":  "photos/DSC03899.jpg",
                        "title":  "DSC03899",
-                       "sizeMb":  "212 KB",
+                       "sizeMb":  "439 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  66,
                        "fileName":  "DSC03900.jpg",
                        "url":  "photos/DSC03900.jpg",
                        "title":  "DSC03900",
-                       "sizeMb":  "212 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  67,
                        "fileName":  "DSC03908.jpg",
                        "url":  "photos/DSC03908.jpg",
                        "title":  "DSC03908",
-                       "sizeMb":  "219 KB",
+                       "sizeMb":  "479 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  68,
                        "fileName":  "DSC03914.jpg",
                        "url":  "photos/DSC03914.jpg",
                        "title":  "DSC03914",
-                       "sizeMb":  "248 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  69,
                        "fileName":  "DSC03920.jpg",
                        "url":  "photos/DSC03920.jpg",
                        "title":  "DSC03920",
-                       "sizeMb":  "206 KB",
+                       "sizeMb":  "493 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  70,
                        "fileName":  "DSC03924.jpg",
                        "url":  "photos/DSC03924.jpg",
                        "title":  "DSC03924",
-                       "sizeMb":  "334 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  71,
                        "fileName":  "DSC03930.jpg",
                        "url":  "photos/DSC03930.jpg",
                        "title":  "DSC03930",
-                       "sizeMb":  "3 KB",
+                       "sizeMb":  "514 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  72,
@@ -804,185 +804,185 @@ window.GALLERY_DATA = {
                        "title":  "DSC03934",
                        "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  73,
                        "fileName":  "DSC03935.jpg",
                        "url":  "photos/DSC03935.jpg",
                        "title":  "DSC03935",
-                       "sizeMb":  "200 KB",
+                       "sizeMb":  "485 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  74,
                        "fileName":  "DSC03937.jpg",
                        "url":  "photos/DSC03937.jpg",
                        "title":  "DSC03937",
-                       "sizeMb":  "297 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  75,
                        "fileName":  "DSC03942.jpg",
                        "url":  "photos/DSC03942.jpg",
                        "title":  "DSC03942",
-                       "sizeMb":  "181 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  76,
                        "fileName":  "DSC03953.jpg",
                        "url":  "photos/DSC03953.jpg",
                        "title":  "DSC03953",
-                       "sizeMb":  "238 KB",
+                       "sizeMb":  "744 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  77,
                        "fileName":  "DSC03962.jpg",
                        "url":  "photos/DSC03962.jpg",
                        "title":  "DSC03962",
-                       "sizeMb":  "251 KB",
+                       "sizeMb":  "689 KB",
                        "orientation":  "portrait",
-                       "width":  819,
-                       "height":  1024,
-                       "aspectRatio":  "819:1024"
+                       "width":  2048,
+                       "height":  2560,
+                       "aspectRatio":  "2048:2560"
                    },
                    {
                        "id":  78,
                        "fileName":  "DSC03974.jpg",
                        "url":  "photos/DSC03974.jpg",
                        "title":  "DSC03974",
-                       "sizeMb":  "200 KB",
+                       "sizeMb":  "436 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  79,
                        "fileName":  "DSC03977.jpg",
                        "url":  "photos/DSC03977.jpg",
                        "title":  "DSC03977",
-                       "sizeMb":  "217 KB",
+                       "sizeMb":  "468 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  80,
                        "fileName":  "DSC03980.jpg",
                        "url":  "photos/DSC03980.jpg",
                        "title":  "DSC03980",
-                       "sizeMb":  "215 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  81,
                        "fileName":  "DSC03996.jpg",
                        "url":  "photos/DSC03996.jpg",
                        "title":  "DSC03996",
-                       "sizeMb":  "232 KB",
+                       "sizeMb":  "64 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  82,
                        "fileName":  "DSC04007.jpg",
                        "url":  "photos/DSC04007.jpg",
                        "title":  "DSC04007",
-                       "sizeMb":  "417 KB",
+                       "sizeMb":  "1 MB",
                        "orientation":  "landscape",
-                       "width":  1024,
-                       "height":  683,
-                       "aspectRatio":  "1024:683"
+                       "width":  2560,
+                       "height":  1707,
+                       "aspectRatio":  "2560:1707"
                    },
                    {
                        "id":  83,
                        "fileName":  "DSC04009.jpg",
                        "url":  "photos/DSC04009.jpg",
                        "title":  "DSC04009",
-                       "sizeMb":  "421 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  84,
                        "fileName":  "DSC04027.jpg",
                        "url":  "photos/DSC04027.jpg",
                        "title":  "DSC04027",
-                       "sizeMb":  "362 KB",
+                       "sizeMb":  "833 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  85,
                        "fileName":  "DSC04032.jpg",
                        "url":  "photos/DSC04032.jpg",
                        "title":  "DSC04032",
-                       "sizeMb":  "64 KB",
+                       "sizeMb":  "945 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  86,
                        "fileName":  "DSC04043.jpg",
                        "url":  "photos/DSC04043.jpg",
                        "title":  "DSC04043",
-                       "sizeMb":  "387 KB",
+                       "sizeMb":  "914 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1706,
+                       "height":  2560,
+                       "aspectRatio":  "1706:2560"
                    },
                    {
                        "id":  87,
                        "fileName":  "DSC04049.jpg",
                        "url":  "photos/DSC04049.jpg",
                        "title":  "DSC04049",
-                       "sizeMb":  "370 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    },
                    {
                        "id":  88,
                        "fileName":  "DSC04050.jpg",
                        "url":  "photos/DSC04050.jpg",
                        "title":  "DSC04050",
-                       "sizeMb":  "335 KB",
+                       "sizeMb":  "576 KB",
                        "orientation":  "portrait",
-                       "width":  683,
-                       "height":  1024,
-                       "aspectRatio":  "683:1024"
+                       "width":  1707,
+                       "height":  2560,
+                       "aspectRatio":  "1707:2560"
                    }
                ]
 };
